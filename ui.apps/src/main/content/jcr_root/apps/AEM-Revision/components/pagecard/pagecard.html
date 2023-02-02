@@ -1,0 +1,15 @@
+<div data-sly-use.pageCard="com.aemrevision.core.models.PageCardModel"
+	 data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+
+	<div data-sly-list="${pageCard.pageDetail}">
+		<span>${item.title} - ${item.description}</span><br> 
+	</div>
+	
+	<br>
+	<br>
+	
+	<div data-sly-list="${pageCard.childPageDetail}">
+		<span>${item.title} - ${item.description}</span><br> 
+	</div>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !pageCard.pageDetail }"></sly>
